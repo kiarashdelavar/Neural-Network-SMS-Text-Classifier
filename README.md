@@ -1,12 +1,44 @@
 # Neural-Network-SMS-Text-Classifier
-In this challenge, you need to create a machine learning model that will classify SMS messages as either "ham" or "spam". A "ham" message is a normal message sent by a friend. A "spam" message is an advertisement or a message sent by a company.
 
-You should create a function called predict_message that takes a message string as an argument and returns a list. The first element in the list should be a number between zero and one 
+This project involves building a machine learning model to classify SMS messages as either "ham" (normal messages from friends) or "spam" (advertisements or messages from companies). The model will be implemented using a neural network to achieve high accuracy.
 
-that indicates the likeliness of "ham" (0) or "spam" (1). The second element in the list should be the word "ham" or "spam", depending on which is most likely.
+Dataset Description:
+The SMS Spam Collection dataset will be used for this project. The dataset is already split into training and testing sets, providing a convenient starting point for model development and evaluation.
 
-For this challenge, you will use the SMS Spam Collection dataset. The dataset has already been grouped into train data and test data.
+Objective:
 
-The first two cells import the libraries and data. The final cell tests your model and function. Add your code in between these cells.
+Develop a function called predict_message that takes an SMS message string as input and returns a list. The list will contain two elements:
 
+    1- A number between 0 and 1 indicating the likelihood of the message being "ham" (0) or "spam" (1).
+    2- A string "ham" or "spam" based on the predicted likelihood.
+
+Methodology:
+
+    1-Data Import and Preprocessing: Load the dataset and preprocess the text data, including tokenization, vectorization, and normalization.
+    2-Model Development: Build and train a neural network model using a suitable deep learning framework such as TensorFlow or PyTorch.
+    3-Prediction Function: Implement the predict_message function that uses the trained model to classify new SMS messages.
+
+Function: predict_message:
+The predict_message function will process the input message and utilize the trained neural network model to predict whether the message is "ham" or "spam".
+
+Implementation:
+   
+    import pandas as pd
+    import numpy as np
+    from sklearn.model_selection import train_test_split
+    from sklearn.feature_extraction.text import CountVectorizer
+    from sklearn.preprocessing import LabelEncoder
+    from tensorflow.keras.models import Sequential
+    from tensorflow.keras.layers import Dense, Dropout
+    from tensorflow.keras.preprocessing.text import Tokenizer
+    from tensorflow.keras.preprocessing.sequence import pad_sequences
+    
+    def predict_message(message):
+       
+        return
+        
+    print(predict_message("Congratulations! You've won a free ticket to the Bahamas. Text WIN to 12345 to claim."))
+
+
+Place your data preprocessing, model training, and prediction logic between the provided cells to complete the implementation.
 
